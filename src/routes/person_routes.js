@@ -1,4 +1,4 @@
-[5: 50 p.m., 15 / 7 / 2022] Juan Pablo Giraldo: const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const personSchedule = mongoose.Schema({
     name: { type: String, require: true },
     lastname: { type: String, require: true },
