@@ -1,0 +1,74 @@
+###
+POST http://localhost:3000/api/v1/serie/serie HTTP/1.1
+Content-Type: application/json
+
+{
+    "serie": "serie 1", 
+        "number_seasons": 1, 
+        "original_lenguage": "SP", 
+        "features_seasons": { 
+            "season_number": 1,  
+            "season_name": "primera", 
+            "premier_date": "2022/02/02", 
+            "cast": ["actor1","actor2","actor3"], 
+            "episodes": { 
+                  
+                "episode_name": "Episodio 1", 
+                "time_duration": 1 
+            } 
+        } 
+}
+
+
+###
+POST http://localhost:3000/api/v1/people/person HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Juan",
+    "lastname":"Giraldo",
+    "email": "jpgiraldo@umanizales.edu.co",
+    "age": 31,
+    "address":{
+        "city": "Manizales",
+        "code_city": 170006,
+        "lat": 1700009,
+        "long": -988766
+    },
+    "pets": ["dog", "cat", "fishes"]
+}
+
+###
+POST http://localhost:3000/api/v1/people/person HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Marco",
+    "lastname":"de la Puerta",
+    "email": "marcodelapuerta@umanizales.edu.co",
+    "age": 31,
+    "address":{
+        "city": "Manizales",
+        "code_city": 170006,
+        "lat": 1700009,
+        "long": -988766
+    },
+    "pets": ["dog"]
+}
+
+###
+GET http://localhost:3000/api/v1/people HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/people/62ccb486052d27b254e051eb HTTP/1.1
+
+###
+PUT http://localhost:3000/api/v1/people/62ccb486052d27b254e051eb HTTP/1.1
+Content-Type: application/json
+
+{
+    "lastname":"Mejía"
+}
+
+###
+DELETE http://localhost:3000/api/v1/people/62ccb486052d27b254e051eb HTTP/1.1
